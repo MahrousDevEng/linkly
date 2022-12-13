@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Best Seller
   if (document.querySelector(".product_slider_1")) {
-    const bestSellerSlider1 = new Swiper(".product_slider_1", {
+    new Swiper(".product_slider_1", {
       autoplay: {
         delay: 3000,
         pauseOnMouseEnter: true,
@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Offers
   if (document.querySelector(".product_slider_2")) {
-    const bestSellerSlider2 = new Swiper(".product_slider_2", {
+    new Swiper(".product_slider_2", {
       autoplay: {
         delay: 4000,
         pauseOnMouseEnter: true,
