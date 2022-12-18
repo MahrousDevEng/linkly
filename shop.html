@@ -1367,6 +1367,7 @@
                         type="button"
                         data-bs-toggle="modal"
                         data-bs-target="#removeFromCartModal"
+                        onclick="triggerRemoveFromCart(this)"
                       >
                         <i class="icon icon-md">
                           <svg
@@ -1449,6 +1450,7 @@
                         type="button"
                         data-bs-toggle="modal"
                         data-bs-target="#removeFromCartModal"
+                        onclick="triggerRemoveFromCart(this)"
                       >
                         <i class="icon icon-md">
                           <svg
@@ -1529,6 +1531,7 @@
                         type="button"
                         data-bs-toggle="modal"
                         data-bs-target="#removeFromCartModal"
+                        onclick="triggerRemoveFromCart(this)"
                       >
                         <i class="icon icon-md">
                           <svg
@@ -1608,6 +1611,7 @@
                         type="button"
                         data-bs-toggle="modal"
                         data-bs-target="#removeFromCartModal"
+                        onclick="triggerRemoveFromCart(this)"
                       >
                         <i class="icon icon-md">
                           <svg
@@ -1688,6 +1692,7 @@
                         type="button"
                         data-bs-toggle="modal"
                         data-bs-target="#removeFromCartModal"
+                        onclick="triggerRemoveFromCart(this)"
                       >
                         <i class="icon icon-md">
                           <svg
@@ -1769,6 +1774,7 @@
                         type="button"
                         data-bs-toggle="modal"
                         data-bs-target="#removeFromCartModal"
+                        onclick="triggerRemoveFromCart(this)"
                       >
                         <i class="icon icon-md">
                           <svg
@@ -1850,6 +1856,7 @@
                         type="button"
                         data-bs-toggle="modal"
                         data-bs-target="#removeFromCartModal"
+                        onclick="triggerRemoveFromCart(this)"
                       >
                         <i class="icon icon-md">
                           <svg
@@ -1931,6 +1938,7 @@
                         type="button"
                         data-bs-toggle="modal"
                         data-bs-target="#removeFromCartModal"
+                        onclick="triggerRemoveFromCart(this)"
                       >
                         <i class="icon icon-md">
                           <svg
@@ -2268,6 +2276,100 @@
           <p class="empty-desc">مستنى ايه ؟</p>
           <a href="shop.html" class="btn btn-main btn-pulse">ابدأ التسوق</a>
         </div>
+
+        <!-- <ul class="cart-canvas-items-wrapper">
+          <li class="cart-canvas-item">
+            <a href="inner-product.html" class="cart-canvas-item-img">
+              <img
+                src="images/products/product-5.webp"
+                data-src="images/products/product-5.webp"
+                alt="product 5"
+                width="70"
+                height="70"
+                class="lazy blur-up"
+              />
+            </a>
+            <div class="cart-canvas-item-info">
+              <a href="inner-product.html">
+                <h2 class="cart-canvas-item-title">كرسي مكتب</h2>
+              </a>
+              <p class="cart-canvas-item-quantity">الكمية: <span>2</span></p>
+              <p class="cart-canvas-item-price">
+                السعر: <span>2400 جنيه</span>
+              </p>
+            </div>
+            <button
+              class="btn btn-delete-item"
+              aria-label="delete cart item"
+              data-bs-toggle="modal"
+              data-bs-target="#removeFromCartModal"
+            >
+              <img
+                src="images/icons/trash-alt.svg"
+                width="16"
+                height="16"
+                alt="delete cart item"
+              />
+            </button>
+          </li>
+
+          <li class="cart-canvas-item">
+            <a href="inner-product.html" class="cart-canvas-item-img">
+              <img
+                src="images/products/product-5.webp"
+                data-src="images/products/product-5.webp"
+                alt="product 5"
+                width="70"
+                height="70"
+                class="lazy blur-up"
+              />
+            </a>
+            <div class="cart-canvas-item-info">
+              <a href="inner-product.html">
+                <h2 class="cart-canvas-item-title">كرسي مكتب</h2>
+              </a>
+              <p class="cart-canvas-item-quantity">الكمية: <span>2</span></p>
+              <p class="cart-canvas-item-price">
+                السعر: <span>2400 جنيه</span>
+              </p>
+            </div>
+            <button
+              class="btn btn-delete-item"
+              aria-label="delete cart item"
+              data-bs-toggle="modal"
+              data-bs-target="#removeFromCartModal"
+            >
+              <img
+                src="images/icons/trash-alt.svg"
+                width="16"
+                height="16"
+                alt="delete cart item"
+              />
+            </button>
+          </li>
+        </ul> -->
+
+        <!-- <div class="summary-wrapper">
+          <ul class="summary">
+            <li>
+              <span>المجموع:</span>
+              <span>2400 جنيه</span>
+            </li>
+            <li>
+              <span>الضريبة:</span>
+              <span>240 جنيه</span>
+            </li>
+            <li class="hr"></li>
+            <li class="total">
+              <span>الاجمالي:</span>
+              <span>2640 جنيه</span>
+            </li>
+          </ul>
+          <a href="checkout.html" class="btn btn-main btn-pulse buy-now"
+            >الشراء الان</a
+          >
+          <a href="cart.html" class="btn btn-show-cart">عرض عربة التسوق</a>
+        </div> -->
       </div>
     </div>
 
@@ -2305,13 +2407,9 @@
               <button type="button" class="btn btn-alt" data-bs-dismiss="modal">
                 متابعة التسوق
               </button>
-              <button
-                type="button"
-                class="btn btn-main btn-pulse"
-                data-bs-dismiss="modal"
-              >
+              <a href="checkout.html" class="btn btn-main btn-pulse">
                 الشراء الان
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -2360,7 +2458,7 @@
                 data-bs-dismiss="modal"
                 onclick="removeFromCart(this)"
               >
-                تأكيد
+                حذف
               </button>
             </div>
           </div>
@@ -2386,8 +2484,11 @@
 
       function addToCart(el) {
         el?.closest(".product-actions")?.classList.add("added");
+      }
 
+      function triggerRemoveFromCart(el) {
         const id = el?.closest(".product-actions")?.getAttribute("id");
+
         if (id) {
           confirmRemoveModal &&
             confirmRemoveModal.setAttribute("data-selected_product", id);

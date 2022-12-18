@@ -2,6 +2,52 @@ document.addEventListener("DOMContentLoaded", () => {
   // Trigger Lazy Load
   const lazyLoadInstance = new LazyLoad();
 
+  // Video Media Query
+  const videoTag = document.getElementById("homeVideoBanner");
+
+      if (videoTag) {
+        if (window.innerWidth < 768) {
+          videoTag.setAttribute(
+            "data-src",
+            "videos/home-video-banner-767-562.mp4"
+          );
+          videoTag.setAttribute(
+            "poster",
+            "videos/home-video-poster-767-562.webp"
+          );
+          videoTag.setAttribute(
+            "data-poster",
+            "videos/home-video-poster-767-562.webp"
+          );
+        } else if (window.innerWidth > 767 && window.innerWidth < 1200) {
+          videoTag.setAttribute(
+            "data-src",
+            "videos/home-video-banner-1200-430.mp4"
+          );
+          videoTag.setAttribute(
+            "poster",
+            "videos/home-video-poster-1200-430.webp"
+          );
+          videoTag.setAttribute(
+            "data-poster",
+            "videos/home-video-poster-1200-430.webp"
+          );
+        } else {
+          videoTag.setAttribute(
+            "data-src",
+            "videos/home-video-banner-1920-430.mp4"
+          );
+          videoTag.setAttribute(
+            "poster",
+            "videos/home-video-poster-1920-430.webp"
+          );
+          videoTag.setAttribute(
+            "data-poster",
+            "videos/home-video-poster-1920-430.webp"
+          );
+        }
+      }
+
   // Scroll To Top
   let requestAnimationFrame = window.requestAnimationFrame;
   const scrollTopBtn = document.getElementById("goTop");
