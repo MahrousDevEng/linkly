@@ -15,6 +15,18 @@
     <title>لينكلى | Linkly</title>
     <!-- Price Range Slider -->
     <link rel="stylesheet" href="plugins/nouislider/nouislider.min.css" />
+    <!-- Select Dropdown -->
+    <link
+      rel="preload"
+      href="plugins/fstdropdown-master/fstdropdown.min.css"
+      as="style"
+      onload="this.rel='stylesheet'"
+    />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="plugins/fstdropdown-master/fstdropdown.min.css"
+    /></noscript>
     <!-- Custom Style -->
     <link rel="stylesheet" href="css/shop.css" />
   </head>
@@ -1166,19 +1178,22 @@
               <div class="sort-count-wrapper">
                 <div class="d-flex">
                   <p class="label">ترتيب حسب:</p>
-                  <div class="custom-select">
-                    <select name="sortBy" aria-label="sort by" id="sortBy">
-                      <option value="most-releveant" selected>
-                        الاكثر رواجا
-                      </option>
-                      <option value="hight-to-low">
-                        السعر من الاعلى الى الاقل
-                      </option>
-                      <option value="low-to-high">
-                        السعر من الاقل الى الاعلى
-                      </option>
-                    </select>
-                  </div>
+                  <select
+                    class="fstdropdown-select"
+                    data-searchdisable="true"
+                    aria-label="sort by"
+                    id="sortBy"
+                  >
+                    <option value="most-releveant" selected>
+                      الاكثر رواجا
+                    </option>
+                    <option value="hight-to-low">
+                      السعر من الاعلى الى الاقل
+                    </option>
+                    <option value="low-to-high">
+                      السعر من الاقل الى الاعلى
+                    </option>
+                  </select>
                 </div>
               </div>
               <!-- End of Sorting -->
@@ -2344,6 +2359,8 @@
     <script src="plugins/lazyload.min.js" defer></script>
     <!-- Price Range Slider -->
     <script src="plugins/nouislider/nouislider.min.js" defer></script>
+    <!-- Custom Dropdown -->
+    <script src="plugins/fstdropdown-master/fstdropdown.min.js" defer></script>
     <!-- Page Scripts -->
     <script src="js/components/header.js" defer></script>
     <script src="js/shop.js" defer></script>
