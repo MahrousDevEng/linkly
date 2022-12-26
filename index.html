@@ -1323,11 +1323,12 @@
             </div>
             <a href="shop.html" class="new-arrival-item">
               <img
+                src="images/936-350.webp"
                 data-src="images/1600-350.webp"
                 data-srcset="images/936-350.webp 936w"
                 class="lazy blur-up"
                 alt="New Arrivals"
-                data-sizes="auto"
+                id="newArrivalBanner"
               />
             </a>
           </div>
@@ -2388,7 +2389,7 @@
               aria-label="delete cart item"
               data-bs-toggle="modal"
               data-bs-target="#removeFromCartModal"
-              >
+            >
               <img
                 src="images/icons/trash-alt.svg"
                 width="16"
@@ -2423,7 +2424,7 @@
               aria-label="delete cart item"
               data-bs-toggle="modal"
               data-bs-target="#removeFromCartModal"
-              >
+            >
               <img
                 src="images/icons/trash-alt.svg"
                 width="16"
@@ -2458,7 +2459,7 @@
               aria-label="delete cart item"
               data-bs-toggle="modal"
               data-bs-target="#removeFromCartModal"
-              >
+            >
               <img
                 src="images/icons/trash-alt.svg"
                 width="16"
@@ -2493,7 +2494,7 @@
               aria-label="delete cart item"
               data-bs-toggle="modal"
               data-bs-target="#removeFromCartModal"
-              >
+            >
               <img
                 src="images/icons/trash-alt.svg"
                 width="16"
@@ -2528,7 +2529,7 @@
               aria-label="delete cart item"
               data-bs-toggle="modal"
               data-bs-target="#removeFromCartModal"
-              >
+            >
               <img
                 src="images/icons/trash-alt.svg"
                 width="16"
@@ -2563,7 +2564,7 @@
               aria-label="delete cart item"
               data-bs-toggle="modal"
               data-bs-target="#removeFromCartModal"
-              >
+            >
               <img
                 src="images/icons/trash-alt.svg"
                 width="16"
@@ -2598,7 +2599,7 @@
               aria-label="delete cart item"
               data-bs-toggle="modal"
               data-bs-target="#removeFromCartModal"
-              >
+            >
               <img
                 src="images/icons/trash-alt.svg"
                 width="16"
@@ -2633,7 +2634,7 @@
               aria-label="delete cart item"
               data-bs-toggle="modal"
               data-bs-target="#removeFromCartModal"
-              >
+            >
               <img
                 src="images/icons/trash-alt.svg"
                 width="16"
@@ -2660,7 +2661,9 @@
               <span>2640 جنيه</span>
             </li>
           </ul>
-          <a href="checkout.html" class="btn btn-main btn-pulse buy-now">الشراء الان</a>
+          <a href="checkout.html" class="btn btn-main btn-pulse buy-now"
+            >الشراء الان</a
+          >
           <a href="cart.html" class="btn btn-show-cart">عرض عربة التسوق</a>
         </div>
       </div>
@@ -2700,10 +2703,7 @@
               <button type="button" class="btn btn-alt" data-bs-dismiss="modal">
                 متابعة التسوق
               </button>
-              <a
-                href="checkout.html"
-                class="btn btn-main btn-pulse"
-              >
+              <a href="checkout.html" class="btn btn-main btn-pulse">
                 الشراء الان
               </a>
             </div>
@@ -2772,6 +2772,60 @@
     <!-- Page Scripts -->
     <script src="js/components/header.js" defer></script>
     <script src="js/home.js" defer></script>
+    <!-- Load Responsive Video -->
+    <script>
+      // Video Media Query
+      const videoTag = document.getElementById("homeVideoBanner");
+
+      if (videoTag) {
+        if (window.innerWidth < 768) {
+          setAttributes(videoTag, {
+            "data-src": "videos/home-video-banner-767-562.mp4",
+            poster: "videos/home-video-poster-767-562.webp",
+            "data-poster": "videos/home-video-poster-767-562.webp",
+          });
+        } else if (window.innerWidth > 767 && window.innerWidth < 1200) {
+          setAttributes(videoTag, {
+            "data-src": "videos/home-video-banner-1200-430.mp4",
+            poster: "videos/home-video-poster-1200-430.webp",
+            "data-poster": "videos/home-video-poster-1200-430.webp",
+          });
+        } else {
+          setAttributes(videoTag, {
+            "data-src": "videos/home-video-banner-1920-430.mp4",
+            poster: "videos/home-video-poster-1920-430.webp",
+            "data-poster": "videos/home-video-poster-1920-430.webp",
+          });
+        }
+      }
+
+      // Load Responsive New Arrivals
+      const newArrivalImg = document.getElementById("newArrivalBanner");
+
+      if (newArrivalImg) {
+        if (window.innerWidth < 992) {
+          setAttributes(newArrivalImg, {
+            src: "images/936-350.webp",
+            "data-src": "images/936-350.webp",
+            width: 936,
+            height: 350,
+          });
+        } else {
+          setAttributes(newArrivalImg, {
+            src: "images/1600-350.webp",
+            "data-src": "images/1600-350.webp",
+            width: 1600,
+            height: 350,
+          });
+        }
+      }
+
+      function setAttributes(el, attrs) {
+        for (var key in attrs) {
+          el.setAttribute(key, attrs[key]);
+        }
+      }
+    </script>
     <!-- Cart Actions -->
     <script defer>
       const confirmRemoveModal = document.getElementById("removeFromCartModal");
