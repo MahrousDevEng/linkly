@@ -967,22 +967,65 @@
                               </li>
                             </ol>
                           </li>
+
                           <li class="mb-2">
                             <label
                               for="filter_by_category_1"
                               class="custom-check-box"
+                              data-bs-toggle="collapse"
+                              data-bs-target="#filter_sub_category_2"
+                              aria-expanded="false"
+                              aria-controls="filter_sub_category_2"
                             >
                               <div class="check-mark-wrapper">
                                 <input
                                   type="checkbox"
                                   name="filter_by_category_1"
                                   id="filter_by_category_1"
+                                  checked
                                 />
                                 <span class="check-mark"></span>
                               </div>
                               <span class="check-label">الهدايا</span>
                             </label>
+                            <ol id="filter_sub_category_2" class="collapse show p-3">
+                              <li class="mb-2">
+                                <label
+                                  for="filter_by_sub_category_10"
+                                  class="custom-check-box"
+                                >
+                                  <div class="check-mark-wrapper">
+                                    <input
+                                      type="checkbox"
+                                      name="filter_by_sub_category_10"
+                                      id="filter_by_sub_category_10"
+                                      checked
+                                    />
+                                    <span class="check-mark"></span>
+                                  </div>
+                                  <span class="check-label">ساعات</span>
+                                </label>
+                              </li>
+                              <li>
+                                <label
+                                  for="filter_by_sub_category_11"
+                                  class="custom-check-box"
+                                >
+                                  <div class="check-mark-wrapper">
+                                    <input
+                                      type="checkbox"
+                                      name="filter_by_sub_category_11"
+                                      id="filter_by_sub_category_11"
+                                      checked
+                                    />
+                                    <span class="check-mark"></span>
+                                  </div>
+                                  <span class="check-label">عطور</span>
+                                </label>
+                              </li>
+                            </ol>
                           </li>
+
                           <li class="mb-2">
                             <label
                               for="filter_by_category_2"
@@ -1138,6 +1181,81 @@
                                 <span class="check-mark"></span>
                               </div>
                               <span class="check-label">الماركة الثالثة</span>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Filter By Features -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="filterByFeature">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#filterByFeatureContent"
+                        aria-expanded="false"
+                        aria-controls="filterByFeatureContent"
+                      >
+                        التصنيف بالميزة
+                      </button>
+                    </h2>
+                    <div
+                      id="filterByFeatureContent"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="filterByFeature"
+                      data-bs-parent="#categoryFilterParent"
+                    >
+                      <div class="accordion-body">
+                        <ul>
+                          <li class="mb-2">
+                            <label
+                              for="filter_by_best_seller"
+                              class="custom-check-box"
+                            >
+                              <div class="check-mark-wrapper">
+                                <input
+                                  type="checkbox"
+                                  name="filter_by_best_seller"
+                                  id="filter_by_best_seller"
+                                />
+                                <span class="check-mark"></span>
+                              </div>
+                              <span class="check-label">الاكثر مبيعا</span>
+                            </label>
+                          </li>
+                          <li class="mb-2">
+                            <label
+                              for="filter_by_new_arrivals"
+                              class="custom-check-box"
+                            >
+                              <div class="check-mark-wrapper">
+                                <input
+                                  type="checkbox"
+                                  name="filter_by_new_arrivals"
+                                  id="filter_by_new_arrivals"
+                                />
+                                <span class="check-mark"></span>
+                              </div>
+                              <span class="check-label">وصلوا حديثا</span>
+                            </label>
+                          </li>
+                          <li>
+                            <label
+                              for="filter_by_discount"
+                              class="custom-check-box"
+                            >
+                              <div class="check-mark-wrapper">
+                                <input
+                                  type="checkbox"
+                                  name="filter_by_discount"
+                                  id="filter_by_discount"
+                                />
+                                <span class="check-mark"></span>
+                              </div>
+                              <span class="check-label">الخصومات</span>
                             </label>
                           </li>
                         </ul>
