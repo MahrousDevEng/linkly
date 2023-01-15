@@ -1,6 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Trigger Lazy Load
-  const lazyLoadInstance = new LazyLoad();
 
   const wz_class = ".wizard";
 
