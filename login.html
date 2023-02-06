@@ -844,7 +844,11 @@
                     <a href="forgot.html" class="forgot">نسيت كلمة المرور</a>
                   </div>
                   <div class="col-12">
-                    <a href="profile.html" type="submit" class="btn btn-main btn-pulse">
+                    <a
+                      href="profile.html"
+                      type="submit"
+                      class="btn btn-main btn-pulse"
+                    >
                       تسجيل الدخول
                     </a>
                   </div>
@@ -919,9 +923,7 @@
                     >
                   </li>
                   <li>
-                    <a href="rewards.html" class="footer-link"
-                      >عميل مميز</a
-                    >
+                    <a href="rewards.html" class="footer-link">عميل مميز</a>
                   </li>
                 </ol>
               </div>
@@ -1029,6 +1031,67 @@
         </div>
       </footer>
     </main>
+
+    <!-- Go To Top -->
+    <button
+      type="button"
+      class="btn go-to-top"
+      id="goTop"
+      aria-label="go to top"
+    >
+      <img
+        src="images/icons/chevrons-up-w.svg"
+        width="24"
+        height="24"
+        alt="scroll to top"
+      />
+    </button>
+
+    <!-- Social Contacts -->
+    <section class="social-contacts smooth">
+      <div class="social-item trigger">
+        <img
+          src="images/icons/plus-w.svg"
+          alt="open social links"
+          width="24"
+          height="24"
+        />
+      </div>
+      <a href="tel:123456" class="social-item call smooth">
+        <img
+          src="images/icons/telephone-call.webp"
+          alt="open social links"
+          width="32"
+          height="32"
+        />
+      </a>
+      <a
+        href="https://wa.me/3934567879"
+        class="social-item whatsapp smooth"
+        target="_blank"
+        rel="noopener"
+      >
+        <img
+          src="images/icons/whatsapp.webp"
+          alt="open social links"
+          width="32"
+          height="32"
+        />
+      </a>
+      <a
+        href="http://m.me/test"
+        class="social-item fb-messenger smooth"
+        target="_blank"
+        rel="noopener"
+      >
+        <img
+          src="images/icons/messenger.webp"
+          alt="open social links"
+          width="32"
+          height="32"
+        />
+      </a>
+    </section>
 
     <!-- Cart Canvas -->
     <div
@@ -1467,11 +1530,9 @@
     <!-- Lazy Load Images -->
     <script src="plugins/lazyload.min.js" defer></script>
     <!-- Page Script -->
+    <script src="js/global.js" defer></script>
     <script defer>
       document.addEventListener("DOMContentLoaded", () => {
-        // Trigger Lazy Load
-        const lazyLoadInstance = new LazyLoad();
-
         // Toggle Show Hide Password
         const passToggleTrigger = document.getElementById("btnTogglePass");
 

@@ -853,7 +853,6 @@
                               aria-expanded="false"
                               aria-controls="filter_sub_category_1"
                             >
-                              
                               <span class="check-label">جميع الفئات</span>
                             </h3>
                             <ol id="filter_sub_category_1" class="collapse p-3">
@@ -1566,7 +1565,6 @@
                 </div>
 
                 <div class="col-6 col-xl-4">
-
                   <div class="main-product">
                     <a href="inner-product.html" class="image-wrapper">
                       <img
@@ -1648,6 +1646,46 @@
                   </div>
                 </div>
 
+                <div class="col-6 col-xl-4">
+                  <div class="main-product out-of-stock">
+                    <a href="inner-product.html" class="image-wrapper">
+                      <img
+                        data-src="images/products/product-3.webp"
+                        class="swiper-lazy blur-up"
+                        width="200"
+                        height="200"
+                        alt="product-1"
+                      />
+                      <div class="sold-out">
+                        <img
+                          data-src="images/sold.webp"
+                          src="images/sold.webp"
+                          class="lazy blur-up"
+                          width="100"
+                          height="70"
+                          alt="مباع"
+                        />
+                      </div>
+                    </a>
+                    <div class="product-info">
+                      <a href="inner-product.html" class="product-title-link">
+                        <h3 class="product-title">لوحة مفاتيح كمبيوتر</h3>
+                      </a>
+                      <p class="current-price">50 جنيه</p>
+                      <p class="old-price">80 جنيه</p>
+                      <div class="product-actions" id="product_3">
+                        <button
+                          type="button"
+                          class="btn btn-alt"
+                          data-bs-toggle="modal"
+                          data-bs-target="#requireOrder"
+                        >
+                          طلب المنتج
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
               <!-- End of Products -->
 
@@ -1834,6 +1872,67 @@
         </div>
       </footer>
     </main>
+
+    <!-- Go To Top -->
+    <button
+      type="button"
+      class="btn go-to-top"
+      id="goTop"
+      aria-label="go to top"
+    >
+      <img
+        src="images/icons/chevrons-up-w.svg"
+        width="24"
+        height="24"
+        alt="scroll to top"
+      />
+    </button>
+
+    <!-- Social Contacts -->
+    <section class="social-contacts smooth">
+      <div class="social-item trigger">
+        <img
+          src="images/icons/plus-w.svg"
+          alt="open social links"
+          width="24"
+          height="24"
+        />
+      </div>
+      <a href="tel:123456" class="social-item call smooth">
+        <img
+          src="images/icons/telephone-call.webp"
+          alt="open social links"
+          width="32"
+          height="32"
+        />
+      </a>
+      <a
+        href="https://wa.me/3934567879"
+        class="social-item whatsapp smooth"
+        target="_blank"
+        rel="noopener"
+      >
+        <img
+          src="images/icons/whatsapp.webp"
+          alt="open social links"
+          width="32"
+          height="32"
+        />
+      </a>
+      <a
+        href="http://m.me/test"
+        class="social-item fb-messenger smooth"
+        target="_blank"
+        rel="noopener"
+      >
+        <img
+          src="images/icons/messenger.webp"
+          alt="open social links"
+          width="32"
+          height="32"
+        />
+      </a>
+    </section>
 
     <!-- Start of Mobile Trigger Filter -->
     <div class="mobile-filter">
@@ -2045,6 +2144,92 @@
     </div>
     <!-- End of Remove From Cart Modal -->
 
+    <!-- Start of Require Order Modal -->
+    <div
+      class="modal fade require-order-modal added-to-cart"
+      id="requireOrder"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="requireOrderLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          >
+            <img src="images/icons/x.svg" alt="close" width="18" height="18" />
+          </button>
+          <div class="modal-body">
+            <div class="desc">
+              <h3>المنتج غير متوفر لدينا حاليا.</h3>
+              <p class="mb-0">اختار الكمية التى تحتاجها و سنوفرها لك قريبا</p>
+            </div>
+            <form>
+              <div class="quantity mb-3">
+                <label for="productQuantity" class="form-label mb-2"
+                  >الكمية</label
+                >
+                <select
+                  class="fstdropdown-select"
+                  data-searchdisable="true"
+                  aria-label="select quantity"
+                  id="productQuantity"
+                  name="product_quantity"
+                  required
+                >
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="orderAddress" class="form-label"
+                  >عنوان الاستلام</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="orderAddress"
+                  name="order_address"
+                  required
+                />
+              </div>
+              <div class="mb-5">
+                <label for="orderNotes" class="form-label">ملاحظات</label>
+                <textarea
+                  name="order_notes"
+                  id="orderNotes"
+                  class="form-control"
+                ></textarea>
+              </div>
+              <div class="actions">
+                <button
+                  type="button"
+                  class="btn btn-alt"
+                  data-bs-dismiss="modal"
+                >
+                  الغاء
+                </button>
+                <button
+                  type="submit"
+                  class="btn btn-main"
+                  data-bs-dismiss="modal"
+                >
+                  اطلب الان
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End of Require Order Modal -->
+
     <!-- Bootstrap Script -->
     <script src="plugins/bootstrap/bootstrap.min.js" defer></script>
     <!-- Lazy Load Images -->
@@ -2054,7 +2239,7 @@
     <!-- Custom Dropdown -->
     <script src="plugins/fstdropdown-master/fstdropdown.min.js" defer></script>
     <!-- Page Scripts -->
-    <script src="js/components/header.js" defer></script>
+    <script src="js/global.js" defer></script>
     <script src="js/shop.js" defer></script>
     <!-- Cart Actions -->
     <script defer>

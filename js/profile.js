@@ -1,7 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Trigger Lazy Load
-  const lazyLoadInstance = new LazyLoad();
-
   // Toggle Show Hide Password
   const passToggleTrigger = document.querySelectorAll(".btnTogglePass");
 
